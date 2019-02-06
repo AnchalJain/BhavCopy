@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Table V01</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="static/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="static/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<form  action="/find" method="get" role="form" id="form-buscar">
+
+						<div class="form-group">
+
+							<div class="input-group">
+
+								<input id="1" class="form-control" type="text" name="query" placeholder="Search..." />
+
+								<span class="input-group-btn"></span>
+
+								<button class="btn btn-dark" type="submit">
+
+								<i class="fa fa-search" aria-hidden="true"></i> 
+
+								</button>
+
+								</span>
+
+							</div>
+
+							</div>
+
+					</form>
+					<table>
+						<thead>
+							<tr class="table100-head">
+								<th class="column1">NAME</th>
+								<th class="column2">CODE</th>
+								<th class="column3">OPEN</th>
+								<th class="column4">HIGH</th>
+								<th class="column5">LOW</th>
+								<th class="column6">CLOSE</th>
+							</tr>
+						</thead>
+						<tbody>
+                              {% for item in data %}
+								<tr>
+                                    <td class="column1">{{ item[0] }}</td>
+									<td class="column2">{{ item[1] }}</td>
+									<td class="column3">{{ item[2] }}</td>
+									<td class="column4">{{ item[3] }}</td>
+									<td class="column5">{{ item[4] }}</td>
+									<td class="column6">{{ item[5] }}</td>
+								</tr>
+                              {% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+<!--===============================================================================================-->	
+	<script src="static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/vendor/bootstrap/js/popper.js"></script>
+	<script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/js/main.js"></script>
+
+</body>
+</html>
